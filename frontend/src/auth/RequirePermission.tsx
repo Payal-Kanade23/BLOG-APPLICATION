@@ -2,7 +2,6 @@ import { Navigate, Outlet, matchPath, useLocation } from "react-router-dom";
 import { useAuthStore } from "./authStore";
 import { PERMISSIONS } from "../utils/constant";
 import { hasPermission } from "../utils/utils";
-import { permission } from "node:process";
 
 const protectedRoutes = [
   { path: "/create-blog", permission: PERMISSIONS.CREATE_BLOG },
