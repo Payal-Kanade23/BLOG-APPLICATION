@@ -1,9 +1,9 @@
-import User from "../models/User";
+import User from "../models/User.js";
 import type { Request, Response, NextFunction } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { ROLE_PERMISSIONS, ROLES } from "../utils/permission";
-import { logAudit } from "../service/audit.service";
+import { ROLE_PERMISSIONS, ROLES } from "../utils/permission.js";
+import { logAudit } from "../service/audit.service.js";
 /*---------------------------SIGNUP----------------------*/
 
 export const registerUser = async (

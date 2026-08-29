@@ -14,11 +14,9 @@ export const connectDB = async () => {
       return;
     }
 
-    await mongoose.connect(mongoUri, {
-      serverSelectionTimeoutMS: 2000,
-    });
-    console.log('[AI Studio] DB connected successfully!');
+    await mongoose.connect(mongoUri );
+    console.log(' DB connected successfully!');
   } catch (error: any) {
-    console.warn('[AI Studio] MongoDB connection failed (running in offline mode):', error?.message || error);
+    console.warn(' MongoDB connection failed (running in offline mode):', error?.message || error);
   }
 };

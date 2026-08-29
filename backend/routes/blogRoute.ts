@@ -1,5 +1,5 @@
 import express from "express";
-import { createBlog, updateBlog, deleteBlog, getBlog, getAllUserBlog, getAllBlog, getDashboard } from "../controllers/blogController";
+import { createBlog, updateBlog, deleteBlog, getBlog, getAllUserBlog, getAllBlog, getDashboard } from "../controllers/blogController.js";
 import z from "zod";
 import { validate } from "../middleware/validate.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";

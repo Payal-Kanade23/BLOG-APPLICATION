@@ -1,9 +1,9 @@
 import type { Server } from "socket.io";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
-import User from "../models/User";
-import Blog from "../models/Blog";
-import { PERMISSIONS, ROLE_PERMISSIONS, type ROLES } from "../utils/permission";
+import User from "../models/User.js";
+import Blog from "../models/Blog.js";
+import { PERMISSIONS, ROLE_PERMISSIONS, type ROLES } from "../utils/permission.js";
 
 export function registerCommentSocket(io: Server) {
   io.use(async (socket, next) => {

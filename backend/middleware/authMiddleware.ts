@@ -1,8 +1,8 @@
 import type{ Request  , Response , NextFunction} from 'express';
 import jwt from 'jsonwebtoken';
-import { ROLE_PERMISSIONS, ROLES } from '../utils/permission';
-import { AuthRequest, UserPayload } from '../utils/express';
-import User from '../models/User';
+import { ROLE_PERMISSIONS, ROLES } from '../utils/permission.js';
+import { AuthRequest, UserPayload } from '../utils/express.js';
+import User from '../models/User.js';
 
 
 

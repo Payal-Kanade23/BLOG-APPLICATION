@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Blog from "../models/Blog";
+import Blog from "../models/Blog.js";
 
 interface FindAllParams {
   search?: string | undefined;
@@ -64,7 +64,6 @@ export const BlogService = {
         },
       };
     } catch (err) {
-      console.warn("BlogService.findAll error (DB offline?):", err);
       return {
         data: [],
         pagination: {

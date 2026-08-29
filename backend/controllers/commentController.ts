@@ -1,10 +1,10 @@
 import type { NextFunction, Response } from "express";
 import type { Server } from "socket.io";
 import mongoose from "mongoose";
-import Blog from "../models/Blog";
-import Comment from "../models/Comment";
-import type { AuthRequest } from "../utils/express";
-import { ROLES } from "../utils/permission";
+import Blog from "../models/Blog.js";
+import Comment from "../models/Comment.js";
+import type { AuthRequest } from "../utils/express.js";
+import { ROLES } from "../utils/permission.js";
 
 const authorFields = "name profileImage role";
 const DEFAULT_PAGE_SIZE = 20;

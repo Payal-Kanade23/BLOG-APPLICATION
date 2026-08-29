@@ -1,10 +1,10 @@
-import { AuthRequest } from "../utils/express";
+import { AuthRequest } from "../utils/express.js";
 import { Response } from "express";
 import mongoose from "mongoose";
-import Blog from "../models/Blog";
-import { Like } from "../models/Like";
-import { logAudit } from "../service/audit.service";
-import User from "../models/User";
+import Blog from "../models/Blog.js";
+import { Like } from "../models/Like.js";
+import { logAudit } from "../service/audit.service.js";
+import User from "../models/User.js";
 
 
 

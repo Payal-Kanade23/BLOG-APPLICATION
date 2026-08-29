@@ -1,9 +1,9 @@
-import { AuthRequest  } from "../utils/express"
+import { AuthRequest  } from "../utils/express.js"
 import { Response, NextFunction } from "express"
-import { PERMISSIONS, ROLE_PERMISSIONS } from "../utils/permission"
+import { PERMISSIONS, ROLE_PERMISSIONS, ROLES } from "../utils/permission.js"
 export const authorize = (permission:PERMISSIONS)=>{
     return(req:AuthRequest , res:Response , next:NextFunction) =>{
-        const role = req.user?.role;
+        const role : ROLES | undefined = req.user?.role;
 
         if(!role){
             return res.status(401).json({

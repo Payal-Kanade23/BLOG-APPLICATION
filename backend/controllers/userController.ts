@@ -1,11 +1,11 @@
-import User from "../models/User";
-import { AuthRequest } from "../utils/express";
+import User from "../models/User.js";
+import { AuthRequest } from "../utils/express.js";
 import { Request,Response, NextFunction } from "express";
 import mongoose from "mongoose";
-import Blog from "../models/Blog";
+import Blog from "../models/Blog.js";
 import bcrypt from 'bcryptjs';
-import { logAudit } from "../service/audit.service";
-import { ROLE_PERMISSIONS, ROLES } from "../utils/permission";
+import { logAudit } from "../service/audit.service.js";
+import { ROLE_PERMISSIONS, ROLES } from "../utils/permission.js";
 export const getAllUser = async (
   req: AuthRequest,
   res: Response,

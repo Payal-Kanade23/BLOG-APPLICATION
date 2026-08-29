@@ -1,10 +1,10 @@
 import express from "express";
 import { z } from "zod";
-import { createComment, deleteComment, listComments, updateComment } from "../controllers/commentController";
-import { authMiddleware } from "../middleware/authMiddleware";
-import { authorize } from "../middleware/authorize";
-import { validate } from "../middleware/validate";
-import { PERMISSIONS } from "../utils/permission";
+import { createComment, deleteComment, listComments, updateComment } from "../controllers/commentController.js";
+import { authMiddleware } from "../middleware/authMiddleware.js";
+import { authorize } from "../middleware/authorize.js";
+import { validate } from "../middleware/validate.js";
+import { PERMISSIONS } from "../utils/permission.js";
 
 const router = express.Router();
 const commentSchema = z.object({

@@ -1,4 +1,4 @@
-import Audit from "../models/Audit";
+import Audit from "../models/Audit.js";
 
 interface LogAuditParams {
   author?: string | undefined;

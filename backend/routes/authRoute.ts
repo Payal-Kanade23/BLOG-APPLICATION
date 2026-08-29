@@ -1,8 +1,8 @@
 import express from 'express';
 import { z } from "zod";
-import { ROLES } from '../utils/permission';
-import { registerUser , loginUser } from '../controllers/authController';
-import { validate } from '../middleware/validate';
+import { ROLES } from '../utils/permission.js';
+import { registerUser , loginUser } from '../controllers/authController.js';
+import { validate } from '../middleware/validate.js';
 const router = express.Router();
 
 /*--------------------------VALIDATION SCHEMA---------------------------------*/

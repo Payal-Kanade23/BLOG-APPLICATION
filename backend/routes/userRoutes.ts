@@ -1,9 +1,9 @@
 import express from 'express';
-import { authMiddleware } from '../middleware/authMiddleware';
-import { uploadProfile } from '../middleware/upload';
-import { getAllUser , getProfile, updateUser , acceptFollowRequest,followUser, rejectFollowRequest, deleteUser, getFollowRequests} from '../controllers/userController';
-import { authorize } from '../middleware/authorize';
-import { PERMISSIONS } from '../utils/permission';
+import { authMiddleware } from '../middleware/authMiddleware.js';
+import { uploadProfile } from '../middleware/upload.js';
+import { getAllUser , getProfile, updateUser , acceptFollowRequest,followUser, rejectFollowRequest, deleteUser, getFollowRequests} from '../controllers/userController.js';
+import { authorize } from '../middleware/authorize.js';
+import { PERMISSIONS } from '../utils/permission.js';
 const router = express.Router();
 
 router.get("/users",authMiddleware ,authorize(PERMISSIONS.VIEW_USERS), getAllUser);

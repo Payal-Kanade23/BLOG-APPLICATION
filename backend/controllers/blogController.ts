@@ -1,9 +1,9 @@
-import Blog from "../models/Blog";
+import Blog from "../models/Blog.js";
 import type {  Request,Response, NextFunction } from "express";
-import { AuthRequest } from "../utils/express";
-import User from "../models/User";
-import { BlogService } from "./blog.service";
-import { logAudit } from "../service/audit.service";
+import { AuthRequest } from "../utils/express.js";
+import User from "../models/User.js";
+import { BlogService } from "./blog.service.js";
+import { logAudit } from "../service/audit.service.js";
 import mongoose from "mongoose";
 export const createBlog = async(
      req: AuthRequest,
@@ -353,13 +353,10 @@ export const getDashboard = async (
 ) => {
   try {
     const userId = req.user?.userId;
-    console.log("userif:",userId)
     const user = userId ? await User.findById(userId) : null;
-console.log("sjdhfgsdftds:",user)
     let blogs;
 
     if (!user) {
-      console.log("enter")
       // Not logged in — only public blogs
       blogs = await Blog.aggregate([
         {
@@ -368,7 +365,6 @@ console.log("sjdhfgsdftds:",user)
           },
         },
       ]);
-      console.log("a;;",blogs)
     } else {
       if(user.role === "ADMIN"){
         blogs = await Blog.find();

@@ -1,6 +1,6 @@
-import Audit from "../models/Audit";
+import Audit from "../models/Audit.js";
 import type { Request, Response } from "express";
-import User from "../models/User";
+import User from "../models/User.js";
 export const getAuditLogs = async (req: Request, res: Response) => {
   try {
 

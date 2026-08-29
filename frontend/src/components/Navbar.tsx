@@ -52,8 +52,7 @@ export function Navbar() {
             </Link>
             )}
            
-               {user?.role !== "ADMIN" || user && (
-              <button
+               {user && user?.role !== "ADMIN" && (              <button
               onClick={() => navigate("/create-blog")}
               className="hidden items-center gap-1.5 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 sm:flex"
             >
